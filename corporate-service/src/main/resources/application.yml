@@ -1,0 +1,12 @@
+server:
+  port: 8086
+spring:
+  datasource:
+    url: jdbc:postgresql://${PG_HOST:localhost:5435}/corporate_db
+    username: ${PG_USER:user}
+    password: ${PG_PASSWORD:password}
+#    driver-class-name: org.postgresql.Driver
+  jpa:
+    open-in-view: true
+    hibernate:
+      ddl-auto: ${HIBERNATE_DDL_AUTO:create-drop}
